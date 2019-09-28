@@ -37,7 +37,7 @@ create table customer_data
      quantity int(3) not null,
      address varchar(50),
      phoneno bigint(10),
-     billamount bigint(10),
+     billamount bigint(10), 
      dateofpurchase date);
 
 create table custom_colour
