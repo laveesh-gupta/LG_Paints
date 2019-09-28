@@ -1,0 +1,52 @@
+create database project_data;
+
+use project_data;
+
+create table login_data
+     (username varchar(20) primary key,
+     firstname varchar(20) not null,
+     lastname varchar(20),
+    address varchar(50),
+    phoneno bigint(10),
+    gender char(1) not null,
+    password varchar(20) not null);
+
+create table staff_data
+     (staff_id int(4) primary key,
+     full_name varchar(30) not null,
+     address varchar(50),
+     gender char(1) not null,
+     salary_pm int(5) not null,
+     bonus int(5),
+     phoneno bigint(10));
+
+create table stock_data
+     (stock_id int(4) primary key,
+     product_name varchar(20) not null,
+     company_name varchar(20) not null,
+     type varchar(7),
+     colour varchar(15) not null,
+     base_price int(5) not null,
+     selling_price int(5) not null,
+     available int(4));
+
+create table customer_data
+     (name varchar(20) not null,
+     type varchar(7) not null,
+     colour_id int(4),
+     quantity int(3) not null,
+     address varchar(50),
+     phoneno bigint(10),
+     billamount bigint(10),
+     dateofpurchase date);
+
+create table custom_colour
+     (name varchar(20) not null,
+     red int(3) not null,
+     green int(3) not null,
+     blue int(3) not null,
+     address varchar(50),
+     phoneno bigint(10),
+     quantity int(4) not null,
+     billamount bigint(10),
+     dateofpurchase date);
